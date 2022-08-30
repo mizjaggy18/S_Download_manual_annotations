@@ -78,5 +78,6 @@
       "uri": "/api/project/$currentProject$/term.json",
       "uri-sort-attribute": "instanceFilename",
       "uri-print-attribute": "instanceFilename"
+    }
   ]
 }
