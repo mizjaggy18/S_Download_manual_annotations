@@ -65,7 +65,7 @@ def run(cyto_job, parameters):
             annotations = AnnotationCollection()        
             annotations.project = id_project
             annotations.image = id_image
-            # annotations.job = id_job
+            annotations.term = [parameters.cytomine_id_images]
             # annotations.user = id_user
             # annotations.showAlgo = True
             annotations.showWKT = True
