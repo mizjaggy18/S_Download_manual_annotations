@@ -84,7 +84,7 @@
       "value-key": "[@ID]",
       "command-line-flag": "--@id",
       "name": "Cytomine User ID",
-      "description": "Download manual annotations from specific user(s)",
+      "description": "Download manual annotations from specific user",
       "set-by-server": false,
       "optional": true,      
       "type": "ListDomain",
