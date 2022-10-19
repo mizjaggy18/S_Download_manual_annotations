@@ -89,8 +89,8 @@
       "optional": true,      
       "type": "ListDomain",
       "uri": "/api/project/$currentProject$/user.json",
-      "uri-sort-attribute": "instanceFilename",
-      "uri-print-attribute": "instanceFilename"
+      "uri-sort-attribute": "username",
+      "uri-print-attribute": "username"
     }
   ]
 }
