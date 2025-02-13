@@ -38,6 +38,7 @@ def run(cyto_job, parameters):
     job = cyto_job.job
     project = cyto_job.project
     id_user = parameters.cytomine_id_user
+    reviewed_only = parameters.reviewed_only
 
     images = ImageInstanceCollection().fetch_with_filter("project", project.id)
     job.update(status=Job.RUNNING, progress=10, statusComment="Images gathered...")
@@ -85,8 +86,13 @@ def run(cyto_job, parameters):
                 annotations.showGIS = True
                 annotations.showTerm = True
                 annotations.annotation = True
+                
                 if id_user:
                     annotations.user = id_user
+                    
+                if reviewed_only==1:
+                    annotations.reviewed = True
+                    
                 annotations.fetch()
                 print(annotations)
 
