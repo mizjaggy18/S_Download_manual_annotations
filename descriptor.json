@@ -6,7 +6,7 @@
     "image": "mizjaggy18/s_download_manual_annotations",
     "type": "singularity"
   },
-  "command-line": "[CYTOMINE_HOST] [CYTOMINE_PUBLIC_KEY] [CYTOMINE_PRIVATE_KEY] [CYTOMINE_ID_PROJECT] [CYTOMINE_ID_SOFTWARE] [CYTOMINE_ID_IMAGES] [CYTOMINE_ID_TERMS] [CYTOMINE_ID_USER]",
+  "command-line": "[CYTOMINE_HOST] [CYTOMINE_PUBLIC_KEY] [CYTOMINE_PRIVATE_KEY] [CYTOMINE_ID_PROJECT] [CYTOMINE_ID_SOFTWARE] [CYTOMINE_ID_IMAGES] [CYTOMINE_ID_TERMS] [CYTOMINE_ID_USER] [REVIEWED_ONLY]",
   "inputs": [
     {
       "id": "cytomine_host",      
@@ -91,6 +91,17 @@
       "uri": "/api/project/$currentProject$/user.json",
       "uri-sort-attribute": "username",
       "uri-print-attribute": "username"
+    }, 
+    {
+      "id": "reviewed_only",
+      "value-key": "[@ID]",
+      "command-line-flag": "--@id",
+      "name": "Flag for reviewed/validated annotations only",
+      "description": "1: reviewed-only, 0: all-annotations",
+      "default-value": 0,
+      "set-by-server": false,
+      "optional": true,
+      "type": "Number"
     }
   ]
 }
